@@ -4,14 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Franco-NTL</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -45,14 +49,38 @@
 					<li><a href="#">BLOG</a></li>
 					<li><a href="#">COLLECTIONS</a></li>
 					<li><a href="#">CONTACT</a></li>
-					<li><a href="#"><i class="fas fa-search"></i></a></li>
+					<li><i class="fas fa-search" onclick="search()"></i></li>
 				</ul>
 			</div>
 			<div class="header-menu-cart">
 				<i class="pe-7s-like"></i>
-				<i class="pe-7s-cart"></i>
+				<i class="pe-7s-cart" onclick="Cart()"></i>
 			</div>
 		</div>
+	</div>
+	<div class="header-menu-search">
+		<div class="seach__main">
+			<input type="text" name="" id="tk">
+			<input type="button" name="" value="search">	
+		</div>
+		<div onclick="cls()" class="seach__log"></div>
+	</div>
+	<div class="header-mini-cart">
+		<div class="mini-cart-above">
+			<img src="img/clock.png">
+			<div class="cart-name-price">
+				<p class="name">Đồng hồ</p>
+				<p class="price">100$</p>
+			</div>
+		</div>
+		<div class="mini-cart-above two">
+			<img src="img/balo.png">
+			<div class="cart-name-price">
+				<p class="name">Ba lô</p>
+				<p class="price">80$</p>
+			</div>
+		</div>
+		<div onclick="clscart()" class="cart_log"></div>
 	</div>
 	<div class="fran-body">
 		<div class="fran-body-container">
@@ -68,7 +96,13 @@
 				</div>
 				<div class="featured-right">
 					<div class="featured-right-above">
-						<img src="img/anh2.png">
+						<div class="above-img">
+							<img src="img/anh2.png">
+						</div>
+						<div class="above-title">
+							<p class="small">SMALL THING</p>
+							<p class="make">MAKE DIFFERENT</p>
+						</div>
 					</div>
 					<div class="featured-right-below">
 						<div class="feature-right-img">
@@ -106,7 +140,7 @@
 									<i class="far fa-star"></i>
 									<i class="far fa-star"></i>
 									<i class="far fa-star"></i>
-									<i class="" ="far fa-star"></i>
+									<i class="far fa-star"></i>
 									<div class="decreption-star-black">
 										<i class="far fa-star"></i>
 									</div>
@@ -310,7 +344,7 @@
 		<div class="fran-body-blog">
 			<div class="blog-title">
 				<p class="latest">LATEST</p>
-				<p class="new">NEW & EVENTS</p>
+				<p class="new">NEWS & EVENTS</p>
 			</div>
 			<div class="blog-container">
 				<div class="blog-list">
@@ -319,7 +353,7 @@
 							<img src="img/anhquy.png">
 							<div class="item-date">
 								<p>Jan</p>
-								<p>23</p>
+								<p class="so">23</p>
 							</div>
 							<div class="item-border">
 								
@@ -328,7 +362,7 @@
 						<div class="item-below">
 							<div class="item-content">
 								<a href="#" class="title">In commodo dolor vitae</a>
-								<p class="content">Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+								<p class="content">Aliquam tempor sagittis neque, vel aliquam<br> risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
 							</div>
 							<div class="item-feedback">
 								<div class="feedback">
@@ -347,7 +381,7 @@
 							<img src="img/mu.png">
 							<div class="item-date">
 								<p>Jan</p>
-								<p>23</p>
+								<p class="so">23</p>
 							</div>
 							<div class="item-border">
 								
@@ -356,7 +390,7 @@
 						<div class="item-below">
 							<div class="item-content">
 								<a href="#" class="title">Vivamus non dignissim elit</a>
-								<p class="content">Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+								<p class="content">Aliquam tempor sagittis neque, vel aliquam<br>  risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
 							</div>
 							<div class="item-feedback">
 								<div class="feedback">
@@ -375,7 +409,7 @@
 							<img src="img/cogai.png">
 							<div class="item-date">
 								<p>Jan</p>
-								<p>23</p>
+								<p class="so">23</p>
 							</div>
 							<div class="item-border">
 								
@@ -384,7 +418,7 @@
 						<div class="item-below">
 							<div class="item-content">
 								<a href="#" class="title">Ut lacinia erat ut diam volutpat</a>
-								<p class="content">Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
+								<p class="content">Aliquam tempor sagittis neque, vel aliquam<br>  risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris.</p>
 							</div>
 							<div class="item-feedback">
 								<div class="feedback">
@@ -420,7 +454,7 @@
 					<p>About Franco</p>
 				</div>
 				<div class="left-content">
-					<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris vulputate mi, eu interdum nunc diam at ipsum. </p>
+					<p>Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris vulputate mi, eu interdum<br> nunc diam at ipsum. </p>
 				</div>
 				<div class="left-menu-icon">
 					<ul>
@@ -464,10 +498,10 @@
 				</div>
 				<div class="right-address">
 					<ul>
-						<li><i class="far fa-map"></i> <p>500 Hennessy Road</p></li>
-						<li><p class="cau">Causeway Bay, Hong Kong</p></li>
-						<li><i class="fas fa-phone-alt"></i><p>+1 23456789</p></li>
-						<li><i class="far fa-envelope"></i><p>contact@yourdomain.com</p></li>
+						<li class="one"><i class="far fa-map"></i> <p class="road">500 Hennessy Road</p></li>
+						<li class="two"><p class="cau">Causeway Bay, Hong Kong</p></li>
+						<li class="three"><i class="fas fa-phone-alt"></i><p class="sdt">+1 23456789</p></li>
+						<li class="four"><i class="far fa-envelope"></i><p class="contact">contact@yourdomain.com</p></li>
 					</ul>
 				</div>
 			</div>

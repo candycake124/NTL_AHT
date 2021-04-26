@@ -1,69 +1,71 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-}
-.fran-header .header-above{
-  display: flex;
-  /*! padding-left: 32px; */
-  height: 50px;
-  background: #222222;
-  width: 100%;
-}
-.fran-header .header-above .above-left{
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-.fran-header .header-above .above-right{
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-}
-.fran-header .header-above .above-right .above-right-login{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 30px;
-}
-.fran-header .header-above p{
-  font-family: 'Open Sans', sans-serif;
-  color: #525252;
-  font-size: 14px;
-}
-.fran-header .header-above .above-left p,.fran-header .header-above .above-left .fa-bookmark,.fran-header .header-above .above-right .above-right-login .fas{
-  margin-right: 7px;
-  color: #525252;
-}
-.fran-header .header-above .above-left .fa-bookmark{
-  margin-left: 32px;
-}
-.fran-header .header-menu{
-  height: 79px;
-  display: flex;
-  align-items: center;
-  border-block-end: 1px solid #dddddd;
-  margin-bottom: 30px;
-}
-.fran-header .header-menu .header-menu-title{
-  border: 2px solid #000000;
-  margin-left: 32px;
-  padding: 11px 16px 11px 16px;
-}
-.fran-header .header-menu .header-menu-title p{
- letter-spacing: 1em;
-  font-weight: 700;
-}
-.fran-header .header-menu .header-menu-title p:after{
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+  .fran-header .header-above{
+    display: flex;
+    height: 46px;
+    background: #222222;
+    width: 100%;
+  }
+  .fran-header .header-above .above-left{
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .fran-header .header-above .above-right{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+  .fran-header .header-above .above-right .above-right-login{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+    letter-spacing: 0.01em;
+  }
+  .fran-header .header-above p{
+    font-family: 'Open Sans', sans-serif;
+    color: #525252;
+    font-size: 14px;
+  }
+  .fran-header .header-above .above-left p,.fran-header .header-above .above-left .fa-bookmark,.fran-header .header-above .above-right .above-right-login .fas{
+    margin-right: 7px;
+    color: #525252;
+    letter-spacing: 0.009em;
+  }
+  .fran-header .header-above .above-left .fa-bookmark{
+    margin-left: 32px;
+    font-size: 10px;
+  }
+  .fran-header .header-menu{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-block-end: 1px solid #dddddd;
+    margin-bottom: 29px;
+  }
+  .fran-header .header-menu .header-menu-title{
+    border: 2px solid #000000;
+    margin-left: 32px;
+    padding: 7px 14px 7px 14px;
+  }
+  .fran-header .header-menu .header-menu-title p{
+   letter-spacing: 0.8em;
+   font-weight: 700;
+   font-size: 20px;
+ }
+ .fran-header .header-menu .header-menu-title p:after{
   content: '';
-  margin-right: -1em;
+  margin-right: -0.8em;
 }
 .fran-header .header-menu .header-menu-menu{
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   width: 1140px;
 }
 .fran-header .header-menu .header-menu-menu ul{
@@ -72,6 +74,8 @@ body{
 .fran-header .header-menu .header-menu-menu li{
   list-style: none;
   margin-left: 57px;
+  margin-top: -4px;
+  letter-spacing: -0.03em;
 }
 .fran-header .header-menu .header-menu-menu li:before{
   margin-left: -57px;
@@ -85,15 +89,112 @@ body{
 .fran-header .header-menu .header-menu-menu li a:hover {
   color: #8262b5;
 }
+.fran-header .header-menu .header-menu-menu li i:hover {
+  color: #8262b5;
+}
 .fran-header .header-menu .header-menu-menu li .fa-search{
   color: #000000;
+  margin-left: 5px;
 }
+/*--------------------------------search-------------------*/
+.header-menu-search{
+  visibility: hidden;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+.seach__log{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 30%;
+}
+.seach__main{
+  position: relative;
+  z-index: 10;
+  max-width: 80%;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 2%;
+  transition: all .5s ease;
+  display: flex;
+  justify-content: center;
+}
+.seach__main input{
+  border-radius: 20px;
+}
+.seach__main input[type='text']{
+  width: 20%;
+  padding: 0.2%;
+}
+.seach__main input[type='button']{
+  padding: 0.5% 1.5%;
+  margin-left: 20px;
+}
+.seach__active{
+  visibility: visible;
+}
+.seach__active .seach__main{
+  margin-top: 5%;
+  transition: all .5s ease;
+}
+/*--------------------------------search - end-------------------*/
+
+
+
+/*--------------------------------mini cart----------------*/
+
+.header-mini-cart{
+  display: flex;
+  justify-content: end;
+  visibility: hidden;
+}
+.header-mini-cart .mini-cart-above img{
+  width: 40%;
+}
+.header-mini-cart .mini-cart-above{
+  display: flex;
+  width: 15%;
+  position: absolute;
+  z-index: 100;
+}
+.header-mini-cart .two{
+  margin-top: 80px;
+}
+.header-mini-cart .mini-cart-above img{
+  height: 70px;
+  margin-right: 20px;
+}
+.header-mini-cart .mini-cart-above .cart-name-price{
+  margin: auto 0;
+}
+.header-mini-cart .mini-cart-above .cart-name-price .name{
+  font-weight: 700;
+}
+.mini-cart-active{
+  visibility: visible;
+}
+.cart_log{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 30%;
+  z-index: 99;
+}
+/*--------------------------------mini cart - end----------------*/
 .fran-header .header-menu .header-menu-cart{
   display: flex;
   justify-content: flex-end;
 }
 .fran-header .header-menu .header-menu-cart i{
-  margin-right: 30px;
+  margin-right: 28px;
   font-size: 30px;
 }
 .fran-body .fran-body-container{
@@ -102,7 +203,7 @@ body{
 }
 .fran-body .body-featured {
   display: flex;
-  margin-bottom: 79px;
+  margin-bottom: 77px;
 }
 .fran-body .body-featured .featured-left .featured-left-img{
   height: 560px;
@@ -116,12 +217,13 @@ body{
 }
 .fran-body .body-featured .featured-left .featured-left-title{
   margin-top: -250px;
-  margin-left: 340px;
+  margin-left: 343px;
   position: absolute;
 }
 .fran-body .body-featured .featured-left .featured-left-title p{
   font-family: 'Pacifico', cursive;
   font-size: 30px;
+  margin-left: -3.2px;
 }
 .fran-body .body-featured .featured-left-title input{
   font-family: 'Montserrat', sans-serif;
@@ -131,32 +233,54 @@ body{
   background: #8262b5;
   font-weight: 400;
   color: #ffffff;
-  margin-left: 210px;
+  margin-left: 207px;
+  margin-top: 3px;
 }
-.fran-body .body-featured .featured-right .featured-right-above{
+.fran-body .body-featured .featured-right .featured-right-above .above-img{
   width: 360px;
   height: 200px;
   position: relative;
 }
+.fran-body .body-featured .featured-right .featured-right-above .above-title{
+  margin-top: -116.5px;
+  margin-left: 57.5px;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+}
+.fran-body .body-featured .featured-right .featured-right-above .above-title .make{
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.fran-body .body-featured .featured-right .featured-right-above .above-title .small{
+  font-size: 16px;
+  color: #616161;
+  letter-spacing: 0.2em;
+}
 .fran-body .body-featured .featured-right .featured-left-title{
   position: absolute;
-  margin-left: 40px;
-  margin-top: -225px;
+  margin-left: 41px;
+  margin-top: -214px;
 }
 .fran-body .body-featured .featured-right .featured-left-title .fo{
   font-size: 16px;
   font-weight: 400;
   color: #616161;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+  letter-spacing: 0.2em;
 }
 .fran-body .body-featured .featured-right .featured-left-title .back{
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 20px
+  margin-bottom: 10px;
+  margin-top: -3px;
 }
 .fran-body .body-featured .featured-right .featured-left-title input{
-  margin-left: 0px;
+  margin-left: 1px;
+  margin-top: 5px;
+  padding: 10px 15px 10px 19px;
+  font-size: 14px;
 }
 .fran-body .body-featured .featured-right .featured-right-above img{
   width: 100%;
@@ -173,7 +297,7 @@ body{
 }
 .fran-body .body-booth .booth-title{
   position: relative;
-  margin-bottom: 76px;
+  margin-bottom: 74px;
 }
 .fran-body .body-booth .booth-title:after{
   border-block-end: 1px solid #8262b5;
@@ -181,27 +305,30 @@ body{
   position: absolute;
   width: 50px;
   height: 1px;
-  margin-top: 23px;
+  margin-top: 22px;
 }
 .fran-body .body-booth .booth-title .franco{
   font-size: 12px;
   letter-spacing: 0.5em;
   font-weight: 700;
   color: #8262b5;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
+  margin-top: -1px;
 }
 .fran-body .body-booth .booth-title .featured{
   font-size: 24px;
   font-weight: 700;
   color: #000000;
+  letter-spacing: 0.1em;
 }
 .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+}
 }
 .fran-body .fran-body-container .body-booth .both-list{
-  width: 263px;
+  width: 260px;
 }
 .fran-body .fran-body-container .body-booth .both-list .both-list-img{
   width: 100%;
@@ -209,14 +336,14 @@ body{
 }
 .fran-body .fran-body-container .body-booth .both-list .both-list-addtocart{
   position: absolute;
-  margin-top: -51px;
-  margin-left: 5px;
+  margin-top: -49px;
+  margin-left: 8px;
 }
 .fran-body .fran-body-container .body-booth .both-list .both-list-addtocart input{
-  padding: 12px 17px 11px 17px;
+  padding: 13px 17px 12px 16px;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   background: #ffffff;
   color: #424242;
   border: 0px;
@@ -226,53 +353,70 @@ body{
 }
 .fran-body .fran-body-container .body-booth .both-list .decreption-name p{
   font-size: 14px;
-  font-weight: 600;
-  margin-top: 20px;
+  font-weight: 500;
+  margin-top: 13px;
+  letter-spacing: -0.1px;
 }
 .fran-body .fran-body-container .body-booth .both-list .decreption-star{
+  font-size: 13px;
   display: flex;
-  margin-top: 12px;
+  margin-top: 11px;
+  margin-left: 1px;
 }
 .fran-body .fran-body-container .body-booth .both-list .decreption-star i{
   color: #f8ba04;
+  font-size: 12px;
 }
 .fran-body .fran-body-container .body-booth .both-list .decreption-star .decreption-star-black i{
   color: #d1d1d1;
+  margin-left: 1px;
+}
+.fran-body .fran-body-container .body-booth .both-list .decreption-star .decreption-star-black{
+  margin-top: -1px;
 }
 .fran-body .fran-body-container .body-booth .body-both-list .decreption-price{
+  color: #d1d1d1;
+  font-size: 15px;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 13px;
+  margin-left: 1px;
+  margin-top: 7px;
 }
 .fran-body .fran-body-container .body-booth .body-both-list .decreption-price p{
   color: #8262b5;
   font-weight: 700;
+  margin-left: -5px;
+  margin-top: -1px;
 }
 .fran-body .fran-body-container .body-booth .body-both-list .decreption-price strike{
   color: #999999;
   margin-right: 6px;
 }
 .fran-body .fran-body-blog{
-  background-image: url('file:///C:/Users/Admin/Desktop/Web/Ly_psd/Franco/img/blog.png');
+  background-image: url(file:///C:/xampp1/htdocs/Franco/img/blog.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 710px;
+  height: 738px;
 }
 .fran-body .fran-body-blog .blog-title{
   text-align: center;
   position: relative;
 }
 .fran-body .fran-body-blog .blog-title .latest{
-  padding-top: 80px;
+  padding-top: 107px;
+  padding-left: 9px;
   color: #8262b5;
   font-weight: 700;
   letter-spacing: 0.5em;
   font-size: 12px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
 }
 .fran-body .fran-body-blog .blog-title .new{
   font-weight: 700;
   font-size: 24px;
   color: #000000;
+  margin-left: 5px;
+  letter-spacing: 0.1em;
 }
 .fran-body .fran-body-blog .blog-title:after{
   content: '';
@@ -280,12 +424,12 @@ body{
   background-color: #8262b5;
   height: 1px;
   position: absolute;
-  margin-top: 29px;
-  margin-left: -30px;
+  margin-top: 23px;
+  margin-left: -24px;
 }
 .fran-body .fran-body-blog .blog-container{
   width: 1140px;
-  margin: 81px auto 0
+  margin: 74px auto 0;
 }
 .fran-body .fran-body-blog .blog-container .blog-list{
   display: flex;
@@ -301,32 +445,44 @@ body{
 .fran-body .fran-body-blog .blog-list-item .item-img .item-date{
   position: absolute;
   background: #a1d1dd;
-  padding: 17px 18px 14px 18px;
+  padding: 13px 18px 10px 18px;
   margin-top: -181px;
-  margin-left: 22px;
+  margin-left: 21px;
+}
+.fran-body .fran-body-blog .blog-list-item .item-img .item-date p{
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+}
+.fran-body .fran-body-blog .blog-list-item .item-img .item-date .so{
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: -1px;
+  margin-left: 3px;
 }
 .fran-body .fran-body-blog .blog-list-item .item-img .item-border{
   border: 1px solid white;
-  width: 50px;
-  height: 50px;
+  width: 49px;
+  height: 49px;
   position: absolute;
-  margin-left: 27px;
-  margin-top: -173px;
+  margin-left: 26px;
+  margin-top: -177px;
 }
 .fran-body .fran-body-blog .blog-container .blog-list-item .item-below{
   background: #ffffff;
 }
 .fran-body .fran-body-blog .blog-container .blog-list-item .item-content{
   border-block-end: 1px solid #ededed;
-  padding: 18px 0 18px 20px;
+  padding: 16px 0 16px 20px;
 }
 .fran-body .fran-body-blog .blog-container .blog-list-item .item-content a{
   display: block;
   color: #000000;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
   text-decoration: none;
+  letter-spacing: -0.013em;
 }
 .fran-body .fran-body-blog .blog-container .blog-list-item .item-content .title:hover{
   color: #8262b5;
@@ -335,11 +491,13 @@ body{
   color: #424242;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  line-height: 22px;
+  font-weight: 600;
 }
 .fran-body .fran-body-blog .blog-container .blog-list .blog-list-item .item-feedback{
   display: flex;
-  height: 56px;
-  margin-left: 20px;
+  height: 52px;
+  margin-left: 21px;
 }
 .fran-body .fran-body-blog .blog-container .blog-list .blog-list-item .item-feedback .feedback{
   display: flex;
@@ -347,7 +505,7 @@ body{
 }
 .fran-body .fran-body-blog .blog-container .blog-list .blog-list-item .item-feedback p{
   font-family: 'Open Sans', sans-serif;
-  margin-left: 5px;
+  margin-left: 3px;
   margin-right: 34px;
   font-size: 14px;
   color: #c0c0c0;
@@ -355,12 +513,13 @@ body{
 .fran-body .fran-body-blog .blog-container .blog-list .blog-list-item .item-feedback .feedback i{
   color: #c0c0c0;
   font-size: 14px;
+  margin-top: 2px;
 }
 .fran-body .fran-body-blog .blog-container .container-three-point{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 32px;
 }
 .fran-body .fran-body-blog .blog-container .container-three-point .point-one{
   width: 10px;
@@ -373,7 +532,7 @@ body{
   height: 13px;
   background: #8262b5;
   border-radius: 100%;
-  margin: 0 10px;
+  margin: 0 7px 0 14px;
 }
 .fran-footer{
   background: #222222;
@@ -386,7 +545,7 @@ body{
 }
 .fran-footer .footer-above .above-left{
   width: 263px;
-  margin-bottom: 100px;
+  margin-bottom: 44px;
 }
 .fran-footer .footer-above .title{
   position: relative;
@@ -394,10 +553,13 @@ body{
 .fran-footer .footer-above .title p{
   color: #f7f7f7;
   font-size: 16px;
-  margin-top: 63px;
-  margin-bottom: 31px;
+  margin-top: 60px;
+  margin-bottom: 28px;
+  margin-left: 1px;
+  letter-spacing: 0.05em;
 }
 .fran-footer .footer-above .title:after{
+  margin-top: -1px;
   width: 100%;
   content: '';
   height: 1px;
@@ -408,20 +570,23 @@ body{
   font-family: 'Open Sans', sans-serif;
   color: #888888;
   font-size: 14px;
-  margin-top: 59px;
+  margin-top: 50px;
+  margin-left: 1px;
 }
 .fran-footer .footer-above .above-left .left-content p{
-  line-height: 20.5px;
+  line-height: 22px;
+  letter-spacing: 0.26px;
 }
 .fran-footer .footer-above .above-left .left-menu-icon ul{
  display: flex; 
-  list-style: none;
-  color: #828282;
-  margin-top: 51px;
+ list-style: none;
+ color: #828282;
+ margin-top: 42px;
+ margin-left: 2px;
 }
 .fran-footer .footer-above .above-left .left-menu-icon ul li{
-  margin-right: 32px;
-  font-size: 16px;
+  margin-right: 31px;
+  font-size: 17px;
 }
 .fran-footer .footer-above .above-center{
   width: 360px;
@@ -434,11 +599,12 @@ body{
   width: 165px;
 }
 .fran-footer .footer-above .above-center .center-menu .menu ul{
-  margin-top: 27px;
+  margin-top: 24px;
 }
 .fran-footer .footer-above .above-center .center-menu .menu li{
   list-style: none;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
+  letter-spacing: 0.01em;
 }
 .fran-footer .footer-above .above-center .center-menu .menu a{
   text-decoration: none;
@@ -463,14 +629,45 @@ body{
   font-size: 14px;
   color: #888888;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 20px;
 }
-.fran-footer .footer-above .above-right .right-address li i{
+.fran-footer .footer-above .above-right .right-address .one i{
+  width: 17px;
+  margin-right: 13px;
+  margin-left: 3px;
+  margin-top: 4px;
+}
+li.two {
+  margin-top: 17px;
+}
+li.three {
+  margin-top: 14px;
+}
+i.fas.fa-phone-alt {
   width: 17px;
   margin-right: 14px;
+  font-size: 13px;
+  margin-left: 3px;
+}
+p.contact {
+  margin-top: 15px;
+  margin-left: 16px;
+  letter-spacing: 0.01em;
+}
+p.sdt {
+  letter-spacing: -0.001em;
+}
+i.far.fa-envelope {
+  margin-top: 17px;
+  margin-left: 3px;
+}
+.fran-footer .footer-above .above-right .right-address li .road{
+  margin-top: 3px;
+  letter-spacing: 0.01em;
 }
 .fran-footer .footer-above .above-right .right-address li .cau{
-  margin-left: 32px;
+  margin-left: 33px;
+  margin-top: -3px;
+  letter-spacing: 0.01em;
 }
 .fran-footer .footer-center {
   background: #393939;
@@ -491,12 +688,16 @@ body{
 .fran-footer .footer-below .below-left i{
   color: #ff4628;
   margin-left: 4px;
-  margin-right: 4px;
+  margin-right: 2px;
+  font-size: 14px;
 }
 .fran-footer .footer-below .below-left p{
   color: #888888;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  margin-top: -3px;
+  margin-left: 2px;
+  letter-spacing: 0.014em;
 }
 .fran-footer .footer-below .below-left .arr{
   margin-left: 4px;
@@ -514,4 +715,9 @@ body{
 .fran-footer .footer-below .below-right ul i{
   margin-left: 5px;
   color: #888888;
+  font-size: 23px;
+  margin-top: -5px;
+}
+#ui-id-1 li{
+  display: block;
 }

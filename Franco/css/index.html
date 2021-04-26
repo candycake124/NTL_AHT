@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <style type="text/css">
+
+
+	 	
+	 	
+
+
+	 	
+	 	
+	 	
+	 	.a{
+	 		display: none;
+	 	}
+	 
+.seach{
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin:  0 auto;
+	transition: all .3s ease;
+}
+.seach_main{
+	position: relative;
+	z-index: 100;
+	background: white;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: -1000px;
+	transition: all .5s ease;
+}
+.lammo{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	opacity: 2%;
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+.active{
+	visibility: visible;
+	transition: all .3s ease;
+}
+.active .seach_main{
+	margin-top: 50px;
+	transition: all .5s ease;
+}
+@media only screen and (max-width: 600px) {
+	h1{
+		color: red;
+	}
+}
+	 	 
+	 	 </style>
+</head>
+<body>
+	<h1 onclick="mo()" class="A B">Xin Chào</h1>
+	<div class="seach">
+		<div class="seach_main">
+			
+		<h1 onclick="dlzkcmsd()">Close</h1>
+		<input type="text">
+		<input type="submit" value="seach" name="">
+		</div>
+		<div class="lammo"></div>
+	</div>
+	<script type="text/javascript">
+		function mo() {
+			$('.seach').addClass('active');
+			
+		}
+		function dlzkcmsd() {
+			$('.seach').removeClass('active');
+		}
+	</script>
+</body>
+</html>
