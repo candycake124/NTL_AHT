@@ -6,17 +6,20 @@
     font-family: 'Montserrat', sans-serif;
     width: 100%;
   }
+  /*--------------------------------header-above------------------*/
   .fran-header .header-above{
     display: flex;
     height: 46px;
     background: #222222;
     width: 100%;
   }
+  /*--------------------------------above-left---------------*/
   .fran-header .header-above .above-left{
     display: flex;
-    align-items: center;
     width: 50%;
+    align-items: center;
   }
+  /*--------------------------------above-right---------------*/
   .fran-header .header-above .above-right{
     display: flex;
     justify-content: flex-end;
@@ -45,8 +48,9 @@
   }
   .fran-header .header-above .above-left .fa-bookmark{
     margin-left: 32px;
-    font-size: 10px;
+    font-size: 14px;
   }
+  /*-----------------------------header-menu------------------*/
   .fran-header .header-menu{
     height: 80px;
     display: flex;
@@ -54,10 +58,12 @@
     border-block-end: 1px solid #dddddd;
     margin-bottom: 29px;
   }
+  /*-----------------------------menu-title------------------*/
   .fran-header .header-menu .header-menu-title{
     border: 2px solid #000000;
     margin-left: 32px;
     padding: 7px 14px 7px 14px;
+    /*! display: flex; */
   }
   .fran-header .header-menu .header-menu-title p{
    letter-spacing: 0.8em;
@@ -68,18 +74,26 @@
   content: '';
   margin-right: -0.8em;
 }
+/*-------------------------------menu----------------*/
+.fran-header .header-menu .header-menu2{
+  display: flex;
+  align-items: center;
+  justify-items: space-between;
+  flex-basis: -moz-available;
+}
 .fran-header .header-menu .header-menu-menu{
   margin: 0 auto;
-  width: 1140px;
+  max-width: 1140px;
 }
 .fran-header .header-menu .header-menu-menu ul{
-  display: flex;
+  /*! display: inline-block; */
 }
 .fran-header .header-menu .header-menu-menu li{
   list-style: none;
   margin-left: 57px;
   margin-top: -4px;
   letter-spacing: -0.03em;
+  display: inline-block;
 }
 .fran-header .header-menu .header-menu-menu li:before{
   margin-left: -57px;
@@ -99,6 +113,9 @@
 .fran-header .header-menu .header-menu-menu li .fa-search{
   color: #000000;
   margin-left: 5px;
+}
+.dot3{
+  margin-right: ;
 }
 /*--------------------------------search-------------------*/
 .header-menu-search{
@@ -146,11 +163,7 @@
   margin-top: 5%;
   transition: all .5s ease;
 }
-/*--------------------------------search - end-------------------*/
-
-
-
-/*--------------------------------mini cart----------------*/
+/*--------------------------------mini cart-active----------------*/
 
 .header-mini-cart{
   display: flex;
@@ -192,7 +205,7 @@
   opacity: 30%;
   z-index: 99;
 }
-/*--------------------------------mini cart - end----------------*/
+/*--------------------------------mini cart----------------*/
 .fran-header .header-menu .header-menu-cart{
   display: flex;
   justify-content: flex-end;
@@ -202,17 +215,23 @@
   font-size: 30px;
   color: #000000;
 }
+.fran-header .header-menu .header-menu-bar{
+  display: none;
+}
+/*------------------------------fran-body-----------------*/
 .fran-body .fran-body-container{
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
 }
+
 .fran-body .body-featured {
   display: flex;
   margin-bottom: 77px;
 }
+/*-------------------------------body-featured-left----------------*/
 .fran-body .body-featured .featured-left .featured-left-img{
   height: 560px;
-  width: 750px;
+  max-width: 750px;
   margin-right: 30px;
   position: relative;
 }
@@ -243,8 +262,9 @@
   display: block;
   text-decoration: none;
 }
+/*------------------------------body-featured-right-----------------*/
 .fran-body .body-featured .featured-right .featured-right-above .above-img{
-  width: 360px;
+  max-width: 360px;
   height: 200px;
   position: relative;
 }
@@ -303,6 +323,7 @@ margin-left: 0px;
   height: 100%;
   width: 100%;
 }
+/*-------------------------------body-both-title----------------*/
 .fran-body .body-booth .booth-title{
   position: relative;
   margin-bottom: 74px;
@@ -329,6 +350,7 @@ margin-left: 0px;
   color: #000000;
   letter-spacing: 0.1em;
 }
+/*-------------------------------both-list----------------*/
 .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
 display: flex;
     justify-content: space-between;
@@ -339,7 +361,7 @@ display: flex;
   width: 260px;
 }
 .fran-body .fran-body-container .body-booth .both-list .both-list-img{
-  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 .fran-body .fran-body-container .body-booth .both-list .both-list-addtocart{
@@ -402,12 +424,13 @@ display: flex;
   color: #999999;
     margin-right: 7px;
 }
+/*----------------------------------body-blog-------------*/
 .fran-body .fran-body-blog{
     background-image: url(../img/blog.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 709px;
+    height: 100%;
     margin-top: 76px;
 }
 .fran-body .fran-body-blog .blog-title{
@@ -439,11 +462,11 @@ display: flex;
   margin-top: 23px;
   margin-left: -24px;
 }
+/*---------------------------body-blog-container-list-item--------------------*/
 .fran-body .fran-body-blog .blog-container{
-  width: 1140px;
+  max-width: 1140px;
   margin: 74px auto 0;
   overflow: hidden;
-  /*! display: flex; */
 }
 .fran-body .fran-body-blog .blog-container ul{
   display: flex;
@@ -452,12 +475,23 @@ display: flex;
   display: flex;
   justify-content: space-between;
 }
+.fran-body .fran-body-blog .blog-list .blog-list-item img{
+  width: 100%;
+}
 .fran-body .fran-body-blog .blog-list .blog-list-item{
   width: 360px;
+}
+.fran-body .fran-body-blog .blog-list ul li{
+  list-style: none;
+}
+.fran-body .fran-body-blog .blog-list .centerrrr{
+  margin-right: 30px;
+  margin-left: 30px;
 }
 .fran-body .fran-body-blog .blog-list-item .item-img{
   position: relative;
   margin-bottom: -3px;
+  width: 100%;
 }
 .fran-body .fran-body-blog .blog-list-item .item-img .item-date{
   position: absolute;
@@ -537,6 +571,7 @@ display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 32px;
+  padding-bottom: 69px;
 }
 .fran-body .fran-body-blog .blog-container .container-three-point .point-one{
   width: 10px;
@@ -558,9 +593,10 @@ display: flex;
 .fran-footer{
   background: #222222;
 }
+/*-----------------------------footer-above-left------------------*/
 .fran-footer .footer-above{
   display: flex;
-  width: 1140px;
+  max-width: 1140px;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -575,7 +611,7 @@ display: flex;
   color: #f7f7f7;
   font-size: 16px;
   font-weight: 400;
-  margin-top: 60px;
+  padding-top: 60px;
   margin-bottom: 28px;
   margin-left: 1px;
   letter-spacing: 0.05em;
@@ -618,6 +654,7 @@ font-size: 14px;
     margin-top: 2px;
     display: block;
 }
+/*----------------------------footer-above-center-------------------*/
 .fran-footer .footer-above .above-center{
   width: 360px;
 }
@@ -647,6 +684,7 @@ font-size: 14px;
   font-weight: 500;
   color: #ffffff;
 }
+/*-----------------------------footer-above-right------------------*/
 .fran-footer .footer-above .above-right{
   width: 263px;
 }
@@ -667,6 +705,7 @@ font-size: 14px;
   margin-left: 3px;
   margin-top: 4px;
 }
+/*---------------------------bonus--------------------*/
 li.two {
   margin-top: 17px;
 }
@@ -700,13 +739,15 @@ i.far.fa-envelope {
   margin-top: -3px;
   letter-spacing: 0.01em;
 }
+/*-------------------------footer-center----------------------*/
 .fran-footer .footer-center {
   background: #393939;
   height: 1px;
   width: 100%;
 }
+/*-------------------------footer-below-left----------------------*/
 .fran-footer .footer-below{
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -734,6 +775,7 @@ i.far.fa-envelope {
   margin-left: 4px;
   color: #ffffff;
 }
+/*-----------------------footer-below-right------------------------*/
 .fran-footer .footer-below .below-right{
   display: flex;
   align-items: center;
@@ -751,4 +793,7 @@ i.far.fa-envelope {
 }
 #ui-id-1 li{
   display: block;
+}
+.blog-list{
+  margin-left: -1140px;
 }
