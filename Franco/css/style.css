@@ -57,6 +57,7 @@
     align-items: center;
     border-block-end: 1px solid #dddddd;
     margin-bottom: 29px;
+    width: 100%;
   }
   /*-----------------------------menu-title------------------*/
   .fran-header .header-menu .header-menu-title{
@@ -80,6 +81,7 @@
   align-items: center;
   justify-items: space-between;
   flex-basis: -moz-available;
+  width: 100%;
 }
 .fran-header .header-menu .header-menu-menu{
   margin: 0 auto;
@@ -209,6 +211,7 @@
 .fran-header .header-menu .header-menu-cart{
   display: flex;
   justify-content: flex-end;
+  margin-top: 4px;
 }
 .fran-header .header-menu .header-menu-cart i{
   margin-right: 28px;
@@ -315,7 +318,7 @@ margin-left: 0px;
   height: 100%;
 }
 .fran-body .body-featured .featured-right .featured-right-below{
-  width: 360px;
+  max-width: 360px;
   height: 330px;
   margin-top: 30px;
 }
@@ -580,6 +583,9 @@ display: flex;
   border-radius: 100%;
   margin-right: -2px;
 }
+.fran-body .fran-body-blog .blog-container .container-three-point .aaaaa{
+  display: none;
+}
 .fran-body .fran-body-blog .blog-container .container-three-point .bbbbbb{
   margin-left: 3px;
 }
@@ -796,4 +802,18 @@ i.far.fa-envelope {
 }
 .blog-list{
   margin-left: -1140px;
+}
+.fran-body .fran-body-blog .blog-container .container-three-point .active-point{
+  width: 13px;
+height: 13px;
+background: #8262b5;
+border-radius: 100%;
+margin: 0 7px 0 14px;
+}
+.fran-body .fran-body-blog .blog-container .container-three-point .non-active-point{
+  width: 10px;
+height: 10px;
+background: #b3a6c8;
+border-radius: 100%;
+margin: 0 7px 0 14px;
 }
