@@ -75,15 +75,33 @@
 }
 /*===================================with 768px===================================*/
 @media all and (max-width: 768px){
-  .fran-body .body-featured .featured-left .featured-left-img{
-    height: 468px;
+  .fran-body .body-featured .featured-right .featured-right-above .above-title{
+    margin-left: 30px;
   }
+  .fran-body .body-featured .featured-right .featured-right-above .above-title .small{
+    font-size: 15px;
+  }
+  .fran-body .body-featured .featured-right .featured-right-above .above-title .make{
+    font-size: 19px;
+  }
+  .fran-body .body-featured .featured-right .featured-right-below{
+    height: 270px;
+  }
+  .fran-body .body-featured .featured-right .featured-right-above .above-img{
+    height: 204px;
+  }
+  .fran-body .body-featured .featured-right .featured-right-below .feature-right-img {
+    height: 210px;
+}
+  .fran-body .body-featured .featured-left .featured-left-img {
+    height: 442px;
+}
   .fran-body .body-featured{
     margin-bottom: 0px;
   }
   .fran-body .fran-body-container .body-booth .body-both-list{
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 75px;
+    margin-right: 75px;
   }
     .fran-header .header-menu .header-menu-menu li{
     margin-left: 10px;
@@ -186,7 +204,16 @@
     width: 130px;
   }
 }/*===================================with 435 ===================================*/
-@media all and (max-width: 435px ){
+@media all and (max-width: 425px ){
+  .fran-body .fran-body-blog{
+    margin-top: 0;
+  }
+  .fran-body .fran-body-blog .blog-container .container-three-point{
+    margin-bottom: 45px;
+  }
+  .fran-body .body-featured .featured-right .featured-right-below{
+    height: 210px;
+  }
   .fran-footer .footer-above .above-left, .fran-footer .footer-above .above-right{
     width: 263px;
     margin-bottom: 30px;
@@ -231,7 +258,7 @@
     display: none;
   }
   .fran-header .header-menu .header-menu-cart{
-    margin-left: 30px;
+    margin-left: 62px;
   }
   .fran-header .header-menu .header-menu-bar{
     display: block;
@@ -242,6 +269,8 @@
   }
     .fran-header .header-menu .header-menu-bar .fa-bars{
     color: #000000;
+    /*! margin-right: -6px; */
+    margin-right: 0;
   }
   .fran-header .header-menu2{
     display: block;
@@ -268,13 +297,13 @@
     margin-bottom: 75px;
   }
   .fran-body .body-featured .featured-left .featured-left-img{
-    width: 359px;
+    width: 346px;
     height: 300px;
     margin-bottom: 30px;
   }
   .fran-body .body-featured .featured-left .featured-left-title {
     margin-top: -171px;
-    margin-left: 139px;
+    margin-left: 123px;
   }
   .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
     display: block;
@@ -322,7 +351,7 @@
     .fran-footer .footer-above{
     display: block;
     margin-top: -59px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .fran-footer .footer-below {
     display: block;
@@ -337,7 +366,7 @@
 @media all and (max-width: 375px){
 /*--------------------------fran-header-menu---------------------*/
   .fran-header .header-menu .header-menu-cart{
-    margin-left: 10px;
+    margin-left: 61px;
   }
   .fran-header .header-menu .header-menu-title p{
     font-size: 13px;
@@ -400,7 +429,7 @@
     /*-------------------------------fran-body-both---------------*/
   .fran-body .body-booth .booth-title{
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
     display: block;
@@ -447,6 +476,9 @@
 }
 /*===================================with 320===================================*/
 @media all and (max-width: 320px){
+  .fran-header .header-menu .header-menu-cart{
+    margin-left: 6px;
+  }
   .fran-body .fran-body-blog{
     margin-top: 0;
   }

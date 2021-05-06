@@ -236,7 +236,7 @@ border: 2px solid #000000;
 }
 /*-------------------------------body-featured-left----------------*/
 .fran-body .body-featured .featured-left .featured-left-img{
-  height: 555px;
+  /*! height: 555px; */
   max-width: 744px;
   margin-right: 30px;
   position: relative;
