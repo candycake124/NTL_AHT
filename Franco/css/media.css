@@ -21,6 +21,9 @@
 }
 /*===================================with 1024===================================*/
 @media all and (max-width: 1024px){
+  .fran-body .body-featured .featured-left .featured-left-img{
+    max-height: 527px;
+  }
   .fran-header .header-menu .header-menu-title p {
     font-size: 18px;
   }
@@ -72,6 +75,12 @@
 }
 /*===================================with 768px===================================*/
 @media all and (max-width: 768px){
+  .fran-body .body-featured .featured-left .featured-left-img{
+    height: 468px;
+  }
+  .fran-body .body-featured{
+    margin-bottom: 0px;
+  }
   .fran-body .fran-body-container .body-booth .body-both-list{
     margin-left: 60px;
     margin-right: 60px;
@@ -92,12 +101,12 @@
     font-size: 20px;
   }
   .fran-body .body-featured .featured-left .featured-left-title {
-    margin-top: -250px;
-    margin-left: 130px;
+    margin-top: -218px;
+    margin-left: 205px;
   }
   .fran-body .body-featured .featured-left-title a{
     font-size: 13px;
-    margin-left: 100px;
+    margin-left: 111px;
   }
   .fran-header .header-above .above-left p{
     overflow: hidden;
@@ -121,7 +130,7 @@
   }
   .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
     display: grid;
-    grid-template-columns: 263px 263px;
+    grid-template-columns: auto auto;
     /*! margin-left: 50px; */
     /*! margin-right: 50px; */
   }
@@ -129,7 +138,7 @@
     width: 236px;
   }
   .blog-list{
-    margin-left: -738px;
+    margin-left: -734px;
   }
   .fran-body .fran-body-blog .blog-list-item .item-img .item-date{
     margin-left: 10px;
@@ -198,7 +207,7 @@
     grid-template-columns: auto auto;
     margin-left: 0;
     margin-right: 0;
-    column-gap: 10px;
+    column-gap: 5px;
   }
   .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above .both-list{
     
@@ -254,15 +263,18 @@
   }
   .fran-body .body-featured{
     display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 75px;
   }
   .fran-body .body-featured .featured-left .featured-left-img{
-    width: 394px;
+    width: 359px;
     height: 300px;
     margin-bottom: 30px;
   }
   .fran-body .body-featured .featured-left .featured-left-title {
-    margin-top: -170px;
-    margin-left: 163px;
+    margin-top: -171px;
+    margin-left: 139px;
   }
   .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
     display: block;
@@ -271,7 +283,7 @@
     margin-left: -404px;
   }
   .fran-body-blog .blog-container .blog-list .blog-list-item{
-    width: 197px;
+    width: 198px;
   }  
   .fran-body-blog .blog-container .blog-list .centerrrr{
     margin: 0;
@@ -400,7 +412,7 @@
     margin-left: -344px;
   }
   .fran-body-blog .blog-container .blog-list .blog-list-item{
-    width: 167px;
+    width: 168px;
   } 
   .fran-body-blog .blog-container .blog-list .blog-list-item img{
     width: 100%;
@@ -435,11 +447,14 @@
 }
 /*===================================with 320===================================*/
 @media all and (max-width: 320px){
+  .fran-body .fran-body-blog{
+    margin-top: 0;
+  }
   .blog-list{
-    margin-left: -293px;
+    margin-left: -287px;
   }
   .fran-body-blog .blog-container .blog-list .blog-list-item{
-    width: 139px;
+    width: 140px;
   }
   .fran-footer .footer-below .below-left p, .fran-footer .footer-below .below-left i{
     font-size: 12px;
