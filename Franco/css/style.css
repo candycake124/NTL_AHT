@@ -42,12 +42,12 @@
     font-size: 14px;
   }
   .fran-header .header-above .above-left p,.fran-header .header-above .above-left .fa-bookmark,.fran-header .header-above .above-right .above-right-login .fas{
-    margin-right: 7px;
+    margin-right: 5px;
     color: #525252;
     letter-spacing: 0.009em;
   }
   .fran-header .header-above .above-left .fa-bookmark{
-    margin-left: 32px;
+    margin-left: 30px;
     font-size: 14px;
   }
   /*-----------------------------header-menu------------------*/
@@ -61,10 +61,9 @@
   }
   /*-----------------------------menu-title------------------*/
   .fran-header .header-menu .header-menu-title{
-    border: 2px solid #000000;
-    margin-left: 32px;
-    padding: 7px 14px 7px 14px;
-    /*! display: flex; */
+border: 2px solid #000000;
+    margin-left: 30px;
+    padding: 7px 12px 7px 14px;
   }
   .fran-header .header-menu .header-menu-title p{
    letter-spacing: 0.8em;
@@ -86,6 +85,7 @@
 .fran-header .header-menu .header-menu-menu{
   margin: 0 auto;
   max-width: 1140px;
+  margin-top: -4px;
 }
 .fran-header .header-menu .header-menu-menu ul{
   /*! display: inline-block; */
