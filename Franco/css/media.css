@@ -4,12 +4,13 @@
     margin-top: -3px;
 }
 .fran-header .header-menu .header-menu-menu li {
-    margin-right: 51px;
+    margin-right: 50px;
     margin-top: 3px;
   margin-left: 0;
 }
   .fran-body .body-featured .featured-left .featured-left-img{
     margin-right: 29px;
+    margin-left: 4px;
   }
 }
 /*===================================with 1280===================================*/
