@@ -1,11 +1,16 @@
 @media all and (min-width: 1910px){
-  .fran-header .header-menu .header-menu-menu ul {
-    margin-left: -61px;
+.fran-header .header-menu .header-menu-menu ul {
+    margin-left: -76px;
+    margin-top: -3px;
 }
-  .fran-header .header-menu .header-menu-menu li {
-    margin-right: 53px;
-    margin-top: -4px;
+.fran-header .header-menu .header-menu-menu li {
+    margin-right: 51px;
+    margin-top: 3px;
+  margin-left: 0;
 }
+  .fran-body .body-featured .featured-left .featured-left-img{
+    margin-right: 29px;
+  }
 }
 /*===================================with 1280===================================*/
 @media all and (max-width: 1280px){

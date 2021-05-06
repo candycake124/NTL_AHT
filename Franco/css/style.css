@@ -92,7 +92,7 @@ border: 2px solid #000000;
 }
 .fran-header .header-menu .header-menu-menu li{
   list-style: none;
-  margin-left: 57px;
+  margin-left: 51px;
   margin-top: -4px;
   letter-spacing: -0.03em;
   display: inline-block;
@@ -244,7 +244,7 @@ border: 2px solid #000000;
 }
 .fran-body .body-featured .featured-left .featured-left-title{
   margin-top: -250px;
-  margin-left: 343px;
+  margin-left: 341px;
   position: absolute;
 }
 .fran-body .body-featured .featured-left .featured-left-title p{
@@ -255,12 +255,12 @@ border: 2px solid #000000;
 .fran-body .body-featured .featured-left-title a{
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  padding: 11px 17px 10px 17px;
+  padding: 11px 15px 10px 16px;
   border: 1px solid #8262b5;
   background: #8262b5;
   font-weight: 400;
   color: #ffffff;
-  margin-left: 207px;
+  margin-left: 209px;
   margin-top: 3px;
   display: block;
   text-decoration: none;
@@ -337,7 +337,7 @@ margin-left: 0px;
   position: absolute;
   width: 50px;
   height: 1px;
-  margin-top: 22px;
+  margin-top: 23px;
 }
 .fran-body .body-booth .booth-title .franco{
   font-size: 12px;
@@ -345,13 +345,15 @@ margin-left: 0px;
   font-weight: 700;
   color: #8262b5;
   margin-bottom: 11px;
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-left: -1px;
 }
 .fran-body .body-booth .booth-title .featured{
   font-size: 24px;
   font-weight: 700;
   color: #000000;
   letter-spacing: 0.1em;
+  margin-left: -1px;
 }
 /*-------------------------------both-list----------------*/
 .fran-body .fran-body-container .body-booth .body-both-list .body-both-list-above{
