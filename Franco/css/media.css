@@ -205,6 +205,16 @@
   }
 }/*===================================with 435 ===================================*/
 @media all and (max-width: 425px ){
+  .menubarrr_log{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 30%;
+  z-index: 99;
+}
   .fran-body .fran-body-blog{
     margin-top: 0;
   }
@@ -283,7 +293,7 @@
   }
   .fran-header .header-menu .menu_man1 ul{
     display: block;
-    margin-left: 30px;
+    margin-left: 8px;
     margin-top: 90px;
     background: #bdc3c7;
   }

@@ -140,6 +140,11 @@ function clscart() {
   var x = $('.header-mini-cart');
   x.removeClass('mini-cart-active');
 }
+function clsclsmenubarrr() {
+  alert('jhbdcbsd');
+  var x = $('.header-menu-menu');
+  x.removeClass('menu_man1');
+}
 $( function() {
   var availableTags = [
   "ActionScript",
