@@ -205,6 +205,14 @@
   }
 }/*===================================with 435 ===================================*/
 @media all and (max-width: 425px ){
+    .fran-header .header-menu .header-menu2{
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  .fran-header .header-menu .header-menu-title{
+    margin-left: 20px;
+  }
   .menubarrr_log{
   display: block;
   position: absolute;
@@ -258,7 +266,8 @@
   .fran-header .header-above .above-right{
     display: flex;
     width: 100%;
-    margin-left: -60px;
+    /*! margin-left: -60px; */
+    justify-content: center;
   }
   .fran-header .header-menu .header-menu-title p{
     font-size: 16px;
@@ -298,16 +307,16 @@
     background: #bdc3c7;
   }
   .fran-body .fran-body-container{
-    margin: 0 20px
+    margin: 0 15px;
   }
   .fran-body .body-featured{
     display: block;
-    margin-left: 20px;
-    margin-right: 20px;
+    /*! margin-left: 20px; */
+    /*! margin-right: 20px; */
     margin-bottom: 75px;
   }
   .fran-body .body-featured .featured-left .featured-left-img{
-    width: 346px;
+    width: 100%;
     height: 300px;
     margin-bottom: 30px;
   }
@@ -375,9 +384,6 @@
 /*===================================with 375===================================*/
 @media all and (max-width: 375px){
 /*--------------------------fran-header-menu---------------------*/
-  .fran-header .header-menu .header-menu-cart{
-    margin-left: 61px;
-  }
   .fran-header .header-menu .header-menu-title p{
     font-size: 13px;
     letter-spacing: 0.5em;
@@ -405,7 +411,7 @@
     margin-bottom: 20px;
   }
   .fran-body .fran-body-container .body-featured{
-    margin: 0 10px; 
+    margin: 0; 
     display: block;
   }
   .fran-body .fran-body-container .body-featured .featured-left .featured-left-img{
