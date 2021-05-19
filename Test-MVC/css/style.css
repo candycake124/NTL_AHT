@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+table th,table td{
+  border: 1px solid black;
+}
+table{
+  margin: 0 auto;
+}
+table input{
+  border: none;
+}
+header{
+  background: #e74c3c;
+  margin-top: -22px;
+  height: 60px;
+  text-align: center;
+}
+.bodyyy{
+  text-align: center;
+}
+.add_customer{
+  margin-top: 50px;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item input,.item select{
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 5px;
+  width: 200px;
+}
+.bodyyy .left{
+  float: left;
+}
+.bodyyy .left ul li{
+  list-style: none;
+  margin-bottom: 20px;
+}
+.bodyyy .left a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #2d3436;
+}
+.bodyyy .left a:hover{
+  color: #55efc4;
+  text-decoration: underline;
+}

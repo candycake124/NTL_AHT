@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.us,.pa{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+input[type='text'],input[type='password']{
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+  height: 20px;
+}
