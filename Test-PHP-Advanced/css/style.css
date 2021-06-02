@@ -50,3 +50,25 @@ header{
   color: #55efc4;
   text-decoration: underline;
 }
+.home h1{
+  text-align: center;
+}
+.customer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.customer .item{
+  display: block;
+}
+.customer img{
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+.customer .infor{
+  margin-left: 20px;
+  margin-top: -15px;
+}
+.customer .infor p{
+  margin-top: -15px;
+}

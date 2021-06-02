@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema1"
+    targetNamespace="http://tempuri.org/XMLSchema1.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="pxk" type="kpxk"/>
+	<xs:complexType name="kpxk">
+		<xs:sequence>
+			<xs:element name="ttpxk" type="kttpxk" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kttpxk">
+		<xs:sequence>
+			<xs:element name="DonVi" type="xs:string"/>
+			<xs:element name="BoPhan" type="xs:string"/>
+			<xs:element name="TenPX" type="xs:string"/>
+			<xs:element name="Ngay" type="xs:date"/>
+			<xs:element name="So" type="xs:string"/>
+			<xs:element name="No" type="xs:int"/>
+			<xs:element name="Co" type="xs:int"/>
+			<xs:element name="TenNguoiNhan" type="xs:string"/>
+			<xs:element name="BoPhan" type="xs:string"/>
+			<xs:element name="LyDo" type="xs:string"/>
+			<xs:element name="TenKhoXuat" type="xs:string"/>
+			<xs:element name="DiaDiemKhoXuat" type="xs:string"/>
+			<xs:element name="HangXuat" type="khx"/>
+			<xs:element name="TongSoTien" type="xs:string"/>
+			<xs:element name="SoChungTuGocKemTheo" type="xs:string"/>
+			<xs:element name="NgayXuat" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="khx">
+		<xs:sequence>
+			<xs:element name="STT">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minExclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TenHang" type="xs:string"/>
+			<xs:element name="MaSo" type="xs:string"/>
+			<xs:element name="DonViTinh" type="xs:string"/>
+			<xs:element name="SoLuong" type="ksl"/>
+			<xs:element name="DonGia" type="xs:float"/>
+			<xs:element name="ThanhTien" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ksl">
+		<xs:sequence>
+			<xs:element name="YeuCau" type="xs:string"/>
+			<xs:element name="ThucXuat" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

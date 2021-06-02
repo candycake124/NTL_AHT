@@ -8,7 +8,7 @@
 			<form method="post">
 				<div class="item">
 					<p>User: </p>
-					<input required type="text" name="user" value="<?php echo $value['name']; ?>">
+					<input readonly required type="text" name="user" value="<?php echo $value['name']; ?>">
 				</div>
 				<div class="item">
 					<p>PassWord: </p>

@@ -4,7 +4,8 @@
  */
 
 include_once 'autoload.php';
-define('a', 'View/');
+/*include_once 'config.php';
+define('a', 'View/');*/
 class model_admin extends model_connect implements interface_admin
 {
 	
@@ -39,20 +40,21 @@ class model_admin extends model_connect implements interface_admin
 		}
 		return $data;
 	}
-	function select_pass($data){
-		$sql='SELECT password FROM `user` WHERE `user`.`id`='.$data['edit'];
-		$this->result=$this->intermediary->var_connect->query($sql);
-		if ($this->result->num_rows==0) {
-			$data=0;
-		}else{
-			while ($row=$this->result->fetch_assoc()) {
-				$data[]=$row;
-			}
-		}
-		return $data;
-	}
 	public function checklogin($data){
 		$sql='SELECT * FROM `user` WHERE name="'.$data['user_email'].'" and password="'.md5($data['pasw']).'"';	
+		$this->result=$this->intermediary->var_connect->query($sql);
+		if ($this->result->num_rows==0) {
+			$data_resutl=0;
+		}else{
+			while ($row=$this->result->fetch_assoc()) {
+				$data_resutl[]=$row;
+			}
+		}
+		return $data_resutl;
+	}
+
+	public function check($name){
+		$sql='SELECT * FROM `user` WHERE name="'.$name['user'].'" and id!="'.$name['edit'].'"';
 		$this->result=$this->intermediary->var_connect->query($sql);
 		if ($this->result->num_rows==0) {
 			$data_resutl=0;
@@ -68,7 +70,7 @@ class model_admin extends model_connect implements interface_admin
 		switch ($key) {
 //----------------------------------/add customer/------------------
 			case '1':
-			$sql='INSERT INTO khachhang(name,email,created_date) VALUES("'.$data['name'].'","'.$data['email'].'","'.date("Y-m-d").'")';
+			$sql='INSERT INTO khachhang(name,email,image,created_date) VALUES("'.$data['name'].'","'.$data['email'].'","'.$data['img'].'","'.date("Y-m-d").'")';
 			$this->intermediary->update($sql);
 			break;
 //---------------------------------/add user/---------------------------------
@@ -88,13 +90,13 @@ class model_admin extends model_connect implements interface_admin
 		switch ($key1) {
 //----------------------------------/edit customer/------------------			
 			case '1':
-			$sql='UPDATE khachhang SET name="'.$data['name'].'", email="'.$data['email'].'", updated_date="'.date("Y-m-d").'" WHERE id="'.$data['edit'].'"';
+			$sql='UPDATE khachhang SET name="'.$data['name'].'", email="'.$data['email'].'", image="'.$data['img'].'", updated_date="'.date("Y-m-d").'" WHERE id="'.$data['edit'].'"';
 			$this->intermediary->update($sql);
 			break;
 //---------------------------------/edit user/---------------------------------
 			case '2':
 			switch ($key2) {
-//---------------------------------/edit user not fix password/---------------------------------
+//-------------------------------/edit user not fix password/---------------------------
 				case '1':
 				$sql='UPDATE `user` SET `name` = "'.$data['user'].'", user_type="'.$data['user_type'].'" WHERE `user`.`id` = "'.$data['edit'].'"';
 				$this->intermediary->update($sql);
@@ -107,6 +109,10 @@ class model_admin extends model_connect implements interface_admin
 				default:
 				break;
 			}
+			case '3':
+			$sql='UPDATE khachhang SET name="'.$data['name'].'", email="'.$data['email'].'", updated_date="'.date("Y-m-d").'" WHERE id="'.$data['edit'].'"';
+			$this->intermediary->update($sql);
+			break;
 			break;
 //---------------------------------/edit customer/---------------------------------
 			default:

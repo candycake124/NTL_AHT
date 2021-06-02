@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="XSLTFile1.xslt"?>
+<pxk>
+	<ttpxk>
+		<DonVi>dv1</DonVi>
+		<BoPhan>bp1</BoPhan>
+		<Ngay>2021-03-03</Ngay>
+		<So>123</So>
+		<No>0</No>
+		<Co>500</Co>
+		<TenNguoiNhan>Nguyen Van A</TenNguoiNhan>
+		<BoPhanNguoiNhan>bp2</BoPhanNguoiNhan>
+		<LyDo>Thieu Hang</LyDo>
+		<TenKhoXuat>k01</TenKhoXuat>
+		<DiaDiemKhoXuat>dd01</DiaDiemKhoXuat>
+		<HangXuat>
+			<STT>1</STT>
+			<TenHang>May Tinh</TenHang>
+			<MaSo>ms01</MaSo>
+			<DonViTinh>CHiec</DonViTinh>
+			<SoLuong>
+				<YeuCau>100</YeuCau>
+				<ThucXuat>100</ThucXuat>
+			</SoLuong>
+			<DonGia>1000</DonGia>
+			<ThanhTien>100000</ThanhTien>
+		</HangXuat>
+		<TongSoTien>180000</TongSoTien>
+		<SoChungTuGocKemTheo>ctg001</SoChungTuGocKemTheo>
+		<NgayXuat>2021-03-03</NgayXuat>
+	</ttpxk>
+	<ttpxk>
+		<DonVi>dv02</DonVi>
+		<BoPhan>bp04</BoPhan>
+		<Ngay>2021-04-05</Ngay>
+		<So>MS003</So>
+		<No>100</No>
+		<Co>200</Co>
+		<TenNguoiNhan>Nguyen Thi Ly</TenNguoiNhan>
+		<BoPhanNguoiNhan>bp03</BoPhanNguoiNhan>
+		<LyDo>Thieu Hang Can Hang Moi</LyDo>
+		<TenKhoXuat>k08</TenKhoXuat>
+		<DiaDiemKhoXuat>dd08</DiaDiemKhoXuat>
+		<HangXuat>
+			<STT>1</STT>
+			<TenHang>Sac Du Phong</TenHang>
+			<MaSo>ms02</MaSo>
+			<DonViTinh>Chiec</DonViTinh>
+			<SoLuong>
+				<YeuCau>300</YeuCau>
+				<ThucXuat>200</ThucXuat>
+			</SoLuong>
+			<DonGia>500</DonGia>
+			<ThanhTien>100000</ThanhTien>
+		</HangXuat>
+		<HangXuat>
+			<STT>2</STT>
+			<TenHang>Sac Du Phong</TenHang>
+			<MaSo>ms02</MaSo>
+			<DonViTinh>Chiec</DonViTinh>
+			<SoLuong>
+				<YeuCau>300</YeuCau>
+				<ThucXuat>200</ThucXuat>
+			</SoLuong>
+			<DonGia>500</DonGia>
+			<ThanhTien>100000</ThanhTien>
+		</HangXuat>
+		<TongSoTien>100000</TongSoTien>
+		<SoChungTuGocKemTheo>ctg03839</SoChungTuGocKemTheo>
+		<NgayXuat>2021-04-05</NgayXuat>
+	</ttpxk>
+</pxk>

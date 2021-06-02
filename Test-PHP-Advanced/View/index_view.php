@@ -9,47 +9,66 @@
 </head>
 <body>
 	<?php 
-	require_once 'view/header.php';
+	require_once url_view.'header.php';
 	?>
 	<div class="bodyyy">
-		<form method="post">
-			<input type="submit" value="Đăng xuất" name="logout">
+		<form method="post" style="float: right;">
+			<?php 
+			if (isset($_SESSION['log'])) {
+				?><input type="submit" value="Đăng xuất" name="logout"><?php
+			}
+			?>
+			<?php 
+			if (!isset($_SESSION['log'])) {
+				?><a href="?action=login">Đăng nhập</a><?php
+			}
+			?>
+			
 		</form>
 		<div class="left">
 			<ul>
-				<?php 
-				if ($_SESSION['type']==1) {
+				<?php
+				if (isset($_SESSION['log'])) {
+
+					if ($_SESSION['type']==1) {
+						?>
+						<li><a href="?action=user">Manage User</a></li>
+						<li><a href="?action=home">Manage Customer</a></li>
+						<?php
+					}
 					?>
-					<li><a href="?action=user">Manage User</a></li>
-					<li><a href="?action=home">Manage Customer</a></li>
+					<li><a href="?action=myuser">My User</a></li>
+					<li><a href="?action=homepage">Home Page</a></li>
 					<?php
 				}
 				?>
-				<li><a href="?action=myuser">My User</a></li>
-				<li><a href="?action=homepage">Home Page</a></li>
 			</ul>
 		</div>
 		
 		<div class="right">
 			<?php 
-			switch ($_GET['action']) {
-				case 'home':
-				require_once 'view/manage_customer.php';
-				break;
-				
-				case 'user':
-				require_once 'view/manage_user.php';
-				break;
-
-				case 'myuser':
-				require_once 'view/myuser.php';
-				break;
-
-				case 'homepage':
-					require_once 'view/home.php';
+			if (isset($_GET['action']) && isset($_SESSION['log'])) {
+				switch ($_GET['action']) {
+					case 'home':
+					require_once url_view.'manage_customer.php';
 					break;
-			}
+
+					case 'user':
+					require_once url_view.'manage_user.php';
+					break;
+
+					case 'myuser':
+					require_once url_view.'myuser.php';
+					break;
+
+					case 'homepage':
+					require_once url_view.'home.php';
+					break;
+				}
+			}else require_once url_view.'home.php';
+			
 			?>
+
 		</div>
 	</div>
 </body>

@@ -17,7 +17,7 @@
 				<form method="POST">
 					<td><?php echo $dem; ?></td>
 					<td><input type="text" name="user" value="<?php echo $value['name']; ?>"></td>
-					<td><input type="text" name="password" value="<?php echo $value['password']; ?>"></td>
+					<td><input type="password" name="password" ></td>
 					<td><input type="text" name="user_type" value="<?php echo $value['user_type']; ?>"></td>
 					<td> <button type="submit" name="edit" value="<?php echo $value['id']?>"><i class="far fa-edit"></i></button>
 						<button value="<?php echo $value['id']?>" name="delete"><i class="far fa-trash-alt"></i></button></td>

@@ -27,7 +27,7 @@ class Home_Contro
 			$user=$this->base->showuser($_SESSION['log'],1);
 			$myuser=$this->base->showuser($_SESSION['log'],2);
 
-			if ($_SESSION['type']==1 && !isset($_GET['action'])) {
+			if ($_SESSION['type']==1 && !isset($_GET['action']) || $_GET['action']=='login') {
 				header('location: index.php?action=home');
 			}else if ($_SESSION['type']==2 && !isset($_GET['action'])) {
 				header('location: index.php?action=homepage');

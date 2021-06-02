@@ -6,10 +6,10 @@
 
 class model_connect
 {
-	public $server = hihi;
-	public $username = 'root';
-	public $password = '';
-	public $database = 'db_quanly';
+	public $server = local;
+	public $username = user;
+	public $password = pass;
+	public $database = db;
 	public $var_connect = null;
 	function connect(){
 		$this->var_connect = new mysqli($this->server, $this->username, $this->password, $this->database);
